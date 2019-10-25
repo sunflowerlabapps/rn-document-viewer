@@ -1,6 +1,6 @@
-# rn-document-viewer [![npm version](https://img.shields.io/npm/v/react-native-doc-viewer.svg?style=flat)](https://www.npmjs.com/package/react-native-doc-viewer)![Platform](https://img.shields.io/badge/platform-react--native%20%5Bios%20%26%20android%5D-blue.svg)![License](https://img.shields.io/npm/l/express.svg)
+# rn-document-viewer [![npm version](https://img.shields.io/npm/v/rn-document-viewer.svg?style=flat)](https://www.npmjs.com/package/rn-document-viewer)![Platform](https://img.shields.io/badge/platform-react--native%20%5Bios%20%26%20android%5D-blue.svg)![License](https://img.shields.io/npm/l/express.svg)
 
-![nodei.co](https://nodei.co/npm/react-native-doc-viewer.png?downloads=true&downloadRank=true&stars=true)
+![nodei.co](https://nodei.co/npm/rn-document-viewer.png?downloads=true&downloadRank=true&stars=true)
 
 A React Native bridge module: Document Viewer for files (pdf, png, jpg, xls, doc, ppt, xlsx, docx, pptx etc.)
 
@@ -37,21 +37,21 @@ Changelog:
 
 ## Getting started
 
-`$ npm install react-native-doc-viewer --save`
+`$ npm install rn-document-viewer --save`
 
 ### Automatic installation
 
-`$ react-native link react-native-doc-viewer`
+`$ react-native link rn-document-viewer`
 
 ### CocoaPods installation
 
 If your project uses CocoaPods to manage React installation (especially with Expo-detached project), most likely you will run into issue with header files not found as described here (https://docs.expo.io/versions/latest/guides/expokit.html#changing-native-dependencies "Changing Native Dependencies"). It will be helpful to follow these steps to have it compiled successfully:
 
-1. `npm install react-native-doc-viewer --save`
+1. `npm install rn-document-viewer --save`
 
 2. Add the plugin dependency to your Podfile, pointing at the path where NPM installed it:
 
-`pod 'RNReactNativeDocViewer', path: '../node_modules/react-native-doc-viewer'`
+`pod 'RNReactNativeDocViewer', path: '../node_modules/rn-document-viewer'`
 
 3. Run `pod install`
 
@@ -60,7 +60,7 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-doc-viewer` and add `RNDocViewer.xcodeproj`
+2. Go to `node_modules` ➜ `rn-document-viewer` and add `RNDocViewer.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNDocViewer.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Linked Frameworks and Libraries must have this 2 Libraries (AssetsLibrary.framework & QuickLook.framework). When not you have to add them.
 
@@ -84,19 +84,19 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 
 2. Append the following lines to `android/settings.gradle`:
    ```
-   include ':react-native-doc-viewer'
-   project(':react-native-doc-viewer').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-doc-viewer/android')
+   include ':rn-document-viewer'
+   project(':rn-document-viewer').projectDir = new File(rootProject.projectDir, 	'../node_modules/rn-document-viewer/android')
    ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
    ```
-     compile project(':react-native-doc-viewer')
+     compile project(':rn-document-viewer')
    ```
 
 #### Windows on the Roadmap
 
 [Read it! :D](https://github.com/ReactWindows/react-native)
 
-1. In Visual Studio add the `RNReactNativeDocViewer.sln` in `node_modules/react-native-react-native-doc-viewer/windows/RNReactNativeDocViewer.sln` folder to their solution, reference from their app.
+1. In Visual Studio add the `RNReactNativeDocViewer.sln` in `node_modules/react-native-rn-document-viewer/windows/RNReactNativeDocViewer.sln` folder to their solution, reference from their app.
 2. Open up your `MainPage.cs` app
 
 - Add `using com.Philipphecht.RNReactNativeDocViewer;` to the usings at the top of the file
