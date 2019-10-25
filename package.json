@@ -1,7 +1,6 @@
-
 {
-  "name": "react-native-doc-viewer",
-  "version": "2.7.8",
+  "name": "rn-document-viewer",
+  "version": "0.0.1",
   "description": "React Native Native Module Bridge Quicklock Document Viewer for IOS + Android supports pdf, png, jpg, xls, ppt, doc, docx, pptx, xlx + Video Player mp4 supported ",
   "main": "index.js",
   "scripts": {
@@ -18,18 +17,18 @@
     "Video Player",
     "Doc Viewer"
   ],
-  "author": "Philipp Hecht",
+  "author": "Hui Yu",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.3.0-alpha.1",
     "react-native": "0.54.3",
-    "react-native-fs":"^2.3.2",
-    "react-native-doc-viewer": "2.7.8"
+    "react-native-fs": "^2.3.2",
+    "rn-document-viewer": "0.0.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philipphecht/react-native-doc-viewer.git"
+    "url": "git+https://github.com/AlvinMi/rn-document-viewer.git"
   },
-    "readme": "https://github.com/philipphecht/react-native-doc-viewer/blob/master/README.md",
-  "homepage": "https://github.com/philipphecht/react-native-doc-viewer/blob/master/README.md"
+  "readme": "https://github.com/AlvinMi/rn-document-viewer/blob/master/README.md",
+  "homepage": "https://github.com/AlvinMi/rn-document-viewer/blob/master/README.md"
 }

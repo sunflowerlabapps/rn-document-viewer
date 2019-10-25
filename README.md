@@ -1,20 +1,23 @@
-
-# react-native-doc-viewer [![npm version](https://img.shields.io/npm/v/react-native-doc-viewer.svg?style=flat)](https://www.npmjs.com/package/react-native-doc-viewer)![Platform](https://img.shields.io/badge/platform-react--native%20%5Bios%20%26%20android%5D-blue.svg)![License](https://img.shields.io/npm/l/express.svg)
+# rn-document-viewer [![npm version](https://img.shields.io/npm/v/react-native-doc-viewer.svg?style=flat)](https://www.npmjs.com/package/react-native-doc-viewer)![Platform](https://img.shields.io/badge/platform-react--native%20%5Bios%20%26%20android%5D-blue.svg)![License](https://img.shields.io/npm/l/express.svg)
 
 ![nodei.co](https://nodei.co/npm/react-native-doc-viewer.png?downloads=true&downloadRank=true&stars=true)
 
 A React Native bridge module: Document Viewer for files (pdf, png, jpg, xls, doc, ppt, xlsx, docx, pptx etc.)
 
 #### 2017 Roadmap
+
 - Download Progess Event Listener for big Files Android
+
 #### 2018 Roadmap
+
 - Android file without external Application
 - Windows Phone Support
 
+#### 2019 Roadmap
+
+- [Remove unused import ReactWebViewManager](https://github.com/philipphecht/react-native-doc-viewer/pull/133)
+
 #### IMPORTANT INFORMATION: THIS IS A OPEN SOURCE PROJECT, SOMETIMES I HAVE NO TIME TO DEVELOP THIS PROJECT. THANK YOU FOR YOUR PULL REQUEST AND YOUR SUPPORT. I will continue to develop it as it is possible in time.
-
-
-
 
 Changelog:
 
@@ -30,9 +33,7 @@ Changelog:
 2.5.2 -   OpenDocAndroid
 2.5.1 -   Cleanings
 2.5.0  -  Update Project for React Native 0.50.3
-
 ```
-
 
 ## Getting started
 
@@ -56,7 +57,6 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 
 ### Manual installation
 
-
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
@@ -68,8 +68,8 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 
    ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/screenshot_xcode_addlibrary2.png "Xcode add Library")
 
-5.  When you Show http Links don't forget to set APP Transport Security Settings ->
-    Allow Arbitrary Loads to YES
+5. When you Show http Links don't forget to set APP Transport Security Settings ->
+   Allow Arbitrary Loads to YES
 
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/plist_file.png "Plist")
 
@@ -78,53 +78,57 @@ If your project uses CocoaPods to manage React installation (especially with Exp
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
-  - Add `import com.philipphecht.RNDocViewerPackage;` to the imports at the top of the file
-  - Add `new RNDocViewerPackage()` to the list returned by the `getPackages()` method
+
+- Add `import com.philipphecht.RNDocViewerPackage;` to the imports at the top of the file
+- Add `new RNDocViewerPackage()` to the list returned by the `getPackages()` method
+
 2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-doc-viewer'
-  	project(':react-native-doc-viewer').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-doc-viewer/android')
-  	```
+   ```
+   include ':react-native-doc-viewer'
+   project(':react-native-doc-viewer').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-doc-viewer/android')
+   ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-doc-viewer')
-  	```
+   ```
+     compile project(':react-native-doc-viewer')
+   ```
 
 #### Windows on the Roadmap
+
 [Read it! :D](https://github.com/ReactWindows/react-native)
 
 1. In Visual Studio add the `RNReactNativeDocViewer.sln` in `node_modules/react-native-react-native-doc-viewer/windows/RNReactNativeDocViewer.sln` folder to their solution, reference from their app.
 2. Open up your `MainPage.cs` app
-  - Add `using com.Philipphecht.RNReactNativeDocViewer;` to the usings at the top of the file
-  - Add `new RNReactNativeDocViewerPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
+- Add `using com.Philipphecht.RNReactNativeDocViewer;` to the usings at the top of the file
+- Add `new RNReactNativeDocViewerPackage()` to the `List<IReactPackage>` returned by the `Packages` method
 
 ## API DOC
+
 ### IOS Document Viewer Doc
 
-| resource                    | description                       |
-|:----------------------------|:----------------------------------|
-| `DoneButtonEvent`      | return true |
-| `RNDownloaderProgress`| return Progress Float|
+| resource               | description           |
+| :--------------------- | :-------------------- |
+| `DoneButtonEvent`      | return true           |
+| `RNDownloaderProgress` | return Progress Float |
 
-
-| resource                    | description                       |
-|:----------------------------|:----------------------------------|
-| `openDoc`      | {url:String,fileNameOptional:String (optional)} |
-| `openDocb64`| {url:String,fileName:String,fileType:String }|
-| `openDocBinaryinUrl` | {url:String,fileName:String,fileType:String } |
+| resource             | description                                     |
+| :------------------- | :---------------------------------------------- |
+| `openDoc`            | {url:String,fileNameOptional:String (optional)} |
+| `openDocb64`         | {url:String,fileName:String,fileType:String }   |
+| `openDocBinaryinUrl` | {url:String,fileName:String,fileType:String }   |
 
 ### Android Document Viewer Doc
 
-| resource                    | description                       |
-|:----------------------------|:----------------------------------|
-| `openDoc`      | {url:String,fileName:String, cache:boolean} |
-| `openDocb64`| {url:String,fileName:String,fileType:String, cache:boolean }|
-| `openDocBinaryinUrl` | not implemented yet |
+| resource             | description                                                  |
+| :------------------- | :----------------------------------------------------------- |
+| `openDoc`            | {url:String,fileName:String, cache:boolean}                  |
+| `openDocb64`         | {url:String,fileName:String,fileType:String, cache:boolean } |
+| `openDocBinaryinUrl` | not implemented yet                                          |
 
 ## Usage
+
 ```javascript
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   AppRegistry,
   StyleSheet,
@@ -139,242 +143,295 @@ import {
   NativeModules,
   NativeEventEmitter,
   TouchableHighlight
-} from 'react-native';
-import OpenFile from 'react-native-doc-viewer';
-var RNFS = require('react-native-fs');
-var SavePath = Platform.OS === 'ios' ? RNFS.MainBundlePath : RNFS.DocumentDirectoryPath;
+} from "react-native";
+import OpenFile from "rn-document-viewer";
+var RNFS = require("react-native-fs");
+var SavePath =
+  Platform.OS === "ios" ? RNFS.MainBundlePath : RNFS.DocumentDirectoryPath;
 export default class DocumentViewerExample extends Component {
- constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       animating: false,
       progress: "",
-      donebuttonclicked: false,
-    }
-    this.eventEmitter = new NativeEventEmitter(NativeModules.RNReactNativeDocViewer);
-    this.eventEmitter.addListener('DoneButtonEvent', (data) => {
+      donebuttonclicked: false
+    };
+    this.eventEmitter = new NativeEventEmitter(
+      NativeModules.RNReactNativeDocViewer
+    );
+    this.eventEmitter.addListener("DoneButtonEvent", data => {
       /*
-      *Done Button Clicked
-      * return true
-      */
+       *Done Button Clicked
+       * return true
+       */
       console.log(data.close);
-      this.setState({donebuttonclicked: data.close});
-    })
+      this.setState({ donebuttonclicked: data.close });
+    });
     this.didPressToObjcButton = this.didPressToObjcButton.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // download progress
-    this.eventEmitter.addListener(
-      'RNDownloaderProgress',
-      (Event) => {
-        console.log("Progress - Download "+Event.progress  + " %")
-        this.setState({progress: Event.progress + " %"});
-      }
-
-    );
+    this.eventEmitter.addListener("RNDownloaderProgress", Event => {
+      console.log("Progress - Download " + Event.progress + " %");
+      this.setState({ progress: Event.progress + " %" });
+    });
   }
 
-  componentWillUnmount (){
+  componentWillUnmount() {
     this.eventEmitter.removeListener();
   }
+
   /*
-  * Handle WWW File Method
-  * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url the File Extension is missing.
-  */
+   * Handle WWW File Method
+   * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url the File Extension is missing.
+   */
   handlePress = () => {
-    this.setState({animating: true});
-    if(Platform.OS === 'ios'){
-      OpenFile.openDoc([{
-        url:"https://calibre-ebook.com/downloads/demos/demo.docx",
-        fileNameOptional:"test filename"
-      }], (error, url) => {
-         if (error) {
-          this.setState({animating: false});
-         } else {
-          this.setState({animating: false});
-           console.log(url)
-         }
-       })
-    }else{
+    this.setState({ animating: true });
+    if (Platform.OS === "ios") {
+      OpenFile.openDoc(
+        [
+          {
+            url: "https://calibre-ebook.com/downloads/demos/demo.docx",
+            fileNameOptional: "test filename"
+          }
+        ],
+        (error, url) => {
+          if (error) {
+            this.setState({ animating: false });
+          } else {
+            this.setState({ animating: false });
+            console.log(url);
+          }
+        }
+      );
+    } else {
       //Android
-      this.setState({animating: true});
-      OpenFile.openDoc([{
-        url:"https://www.huf-haus.com/fileadmin/Bilder/Header/ART_3/Header_HUF_Haus_ART_3___1_.jpg", // Local "file://" + filepath
-        fileName:"sample",
-        cache:false,
-        fileType:"jpg"
-      }], (error, url) => {
-         if (error) {
-          this.setState({animating: false});
-           console.error(error);
-         } else {
-          this.setState({animating: false});
-           console.log(url)
-         }
-       })
+      this.setState({ animating: true });
+      OpenFile.openDoc(
+        [
+          {
+            url:
+              "https://www.huf-haus.com/fileadmin/Bilder/Header/ART_3/Header_HUF_Haus_ART_3___1_.jpg", // Local "file://" + filepath
+            fileName: "sample",
+            cache: false,
+            fileType: "jpg"
+          }
+        ],
+        (error, url) => {
+          if (error) {
+            this.setState({ animating: false });
+            console.error(error);
+          } else {
+            this.setState({ animating: false });
+            console.log(url);
+          }
+        }
+      );
     }
-
-  }
-
+  };
 
   /*
-  * Handle Local File Method
-  * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url the File Extension is missing.
-  */
+   * Handle Local File Method
+   * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url the File Extension is missing.
+   */
   handlePressLocal = () => {
-    this.setState({animating: true});
-    if(Platform.OS === 'ios'){
-        OpenFile.openDoc([{url:SavePath+"/react-native-logo.jpg",
-        fileNameOptional:"test filename"
-      }], (error, url) => {
-         if (error) {
-          this.setState({animating: false});
-         } else {
-          this.setState({animating: false});
-           console.log(url)
-         }
-       })
-    }else{
-      OpenFile.openDoc([{url:SavePath+"/demo.jpg",
-        fileName:"sample",
-        cache:false,
-        fileType:"jpg"
-      }], (error, url) => {
-         if (error) {
-          this.setState({animating: false});
-         } else {
-          this.setState({animating: false});
-           console.log(url)
-         }
-       })
-
+    this.setState({ animating: true });
+    if (Platform.OS === "ios") {
+      OpenFile.openDoc(
+        [
+          {
+            url: SavePath + "/react-native-logo.jpg",
+            fileNameOptional: "test filename"
+          }
+        ],
+        (error, url) => {
+          if (error) {
+            this.setState({ animating: false });
+          } else {
+            this.setState({ animating: false });
+            console.log(url);
+          }
+        }
+      );
+    } else {
+      OpenFile.openDoc(
+        [
+          {
+            url: SavePath + "/demo.jpg",
+            fileName: "sample",
+            cache: false,
+            fileType: "jpg"
+          }
+        ],
+        (error, url) => {
+          if (error) {
+            this.setState({ animating: false });
+          } else {
+            this.setState({ animating: false });
+            console.log(url);
+          }
+        }
+      );
     }
-  }
+  };
 
-    handlePressLocalXLS = () => {
-      this.setState({animating: true});
-      if(Platform.OS === 'ios'){
-          OpenFile.openDoc([{url:SavePath+"/SampleXLSFile_19kb.xls",
-          fileNameOptional:"Sample XLS 94-2003"
-        }], (error, url) => {
-           if (error) {
-            this.setState({animating: false});
-           } else {
-            this.setState({animating: false});
-             console.log(url)
-           }
-         })
-      }else{
-        OpenFile.openDoc([{url:SavePath+"/demo.jpg",
-          fileName:"sample",
-          cache:false,
-          fileType:"jpg"
-        }], (error, url) => {
-           if (error) {
-            this.setState({animating: false});
-           } else {
-            this.setState({animating: false});
-             console.log(url)
-           }
-         })
-
-      }
+  handlePressLocalXLS = () => {
+    this.setState({ animating: true });
+    if (Platform.OS === "ios") {
+      OpenFile.openDoc(
+        [
+          {
+            url: SavePath + "/SampleXLSFile_19kb.xls",
+            fileNameOptional: "Sample XLS 94-2003"
+          }
+        ],
+        (error, url) => {
+          if (error) {
+            this.setState({ animating: false });
+          } else {
+            this.setState({ animating: false });
+            console.log(url);
+          }
+        }
+      );
+    } else {
+      OpenFile.openDoc(
+        [
+          {
+            url: SavePath + "/demo.jpg",
+            fileName: "sample",
+            cache: false,
+            fileType: "jpg"
+          }
+        ],
+        (error, url) => {
+          if (error) {
+            this.setState({ animating: false });
+          } else {
+            this.setState({ animating: false });
+            console.log(url);
+          }
+        }
+      );
     }
-
+  };
 
   /*
-  * Binary in URL
-  * Binary String in Url
-  * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url you dont have an File Extensions
-  */
+   * Binary in URL
+   * Binary String in Url
+   * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url you dont have an File Extensions
+   */
   handlePressBinaryinUrl = () => {
-    this.setState({animating: true});
-    if(Platform.OS === 'ios'){
-      OpenFile.openDocBinaryinUrl([{
-        url:"https://storage.googleapis.com/need-sure/example",
-        fileName:"sample",
-        fileType:"xml"
-      }], (error, url) => {
+    this.setState({ animating: true });
+    if (Platform.OS === "ios") {
+      OpenFile.openDocBinaryinUrl(
+        [
+          {
+            url: "https://storage.googleapis.com/need-sure/example",
+            fileName: "sample",
+            fileType: "xml"
+          }
+        ],
+        (error, url) => {
           if (error) {
             console.error(error);
-            this.setState({animating: false});
+            this.setState({ animating: false });
           } else {
-            console.log(url)
-            this.setState({animating: false});
+            console.log(url);
+            this.setState({ animating: false });
           }
-        })
-    }else{
-      OpenFile.openDocBinaryinUrl([{
-        url:"https://storage.googleapis.com/need-sure/example",
-        fileName:"sample",
-        fileType:"xml",
-        cache:true
-      }], (error, url) => {
+        }
+      );
+    } else {
+      OpenFile.openDocBinaryinUrl(
+        [
+          {
+            url: "https://storage.googleapis.com/need-sure/example",
+            fileName: "sample",
+            fileType: "xml",
+            cache: true
+          }
+        ],
+        (error, url) => {
           if (error) {
             console.error(error);
-            this.setState({animating: false});
+            this.setState({ animating: false });
           } else {
-            console.log(url)
-            this.setState({animating: false});
+            console.log(url);
+            this.setState({ animating: false });
           }
-        })
+        }
+      );
     }
-  }
+  };
 
   /*
-  * Base64String
-  * put only the base64 String without data:application/octet-stream;base64
-  * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url you dont have an File Extensions
-  */
+   * Base64String
+   * put only the base64 String without data:application/octet-stream;base64
+   * fileType Default == "" you can use it, to set the File Extension (pdf,doc,xls,ppt etc) when in the Url you dont have an File Extensions
+   */
   handlePressb64 = () => {
-    if(Platform.OS === 'ios'){
-      OpenFile.openDocb64([{
-        base64:"{BASE64String}"
-        fileName:"sample",
-        fileType:"png"
-      }], (error, url) => {
+    if (Platform.OS === "ios") {
+      OpenFile.openDocb64(
+        [
+          {
+            base64: "{BASE64String}",
+            fileName: "sample",
+            fileType: "png"
+          }
+        ],
+        (error, url) => {
           if (error) {
             console.error(error);
           } else {
-            console.log(url)
+            console.log(url);
           }
-        })
-    }else{
+        }
+      );
+    } else {
       //Android
-      OpenFile.openDocb64([{
-        base64:"{BASE64String}"
-        fileName:"sample",
-        fileType:"png",
-        cache:true /*Use Cache Folder Android*/
-      }], (error, url) => {
+      OpenFile.openDocb64(
+        [
+          {
+            base64: "{BASE64String}",
+            fileName: "sample",
+            fileType: "png",
+            cache: true /*Use Cache Folder Android*/
+          }
+        ],
+        (error, url) => {
           if (error) {
             console.error(error);
           } else {
-            console.log(url)
+            console.log(url);
           }
-        })
+        }
+      );
     }
+  };
 
-    /*
-  * Video File
-  */
+  /*
+   * Video File
+   */
   handlePressVideo = () => {
-    if(Platform.OS === 'ios'){
+    if (Platform.OS === "ios") {
       OpenFile.playMovie(video, (error, url) => {
-                if (error) {
-                    console.error(error);
-                } else {
-                    console.log(url)
-                }
-            })
-    }else{
+        if (error) {
+          console.error(error);
+        } else {
+          console.log(url);
+        }
+      });
+    } else {
       Alert.alert("Android coming soon");
     }
-  }
+  };
 
-
-  <Button
+  render() {
+    return (
+      <View>
+        <Button
           onPress={this.handlePress.bind(this)}
           title="Press Me Open Doc Url"
           accessibilityLabel="See a Document"
@@ -384,7 +441,7 @@ export default class DocumentViewerExample extends Component {
           title="Press Me Open BinaryinUrl"
           accessibilityLabel="See a Document"
         />
-         <Button
+        <Button
           onPress={this.handlePressLocal.bind(this)}
           title="Press Me Open Doc Path"
           accessibilityLabel="See a Document"
@@ -400,34 +457,33 @@ export default class DocumentViewerExample extends Component {
           accessibilityLabel="See a Document"
         />
         <Button
-          onPress={()=>this.handlePressVideo("http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4")}
+          onPress={() =>
+            this.handlePressVideo(
+              "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4"
+            )
+          }
           title="Press Me Open Video"
           accessibilityLabel="See a Document"
         />
+      </View>
+    );
+  }
 }
 ```
-
 
 ## Screenshots
 
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/Screenshot.png "Screenshot 1")
 
-
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/Screenshot1.png "Screenshot 2")
-
 
 ![Alt text](https://raw.githubusercontent.com/philipphecht/react-native-doc-viewer/master/Screenshots/Screenshot2.png "Screenshot 3")
 
-
- Copyright (c) 2017-present, Philipp Hecht
- philipp.hecht@icloud.com
-
+Copyright (c) 2017-present, Philipp Hecht
+philipp.hecht@icloud.com
 
 ## Donation
+
 If this project help you reduce time to develop, you can give me a cup of coffee :)
 
 Etherum wallet: 0x124F99647a904240945d8B582eEf1E3CD6D00a8a
-
-
-
-

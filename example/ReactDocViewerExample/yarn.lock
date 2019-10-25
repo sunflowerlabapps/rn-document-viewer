@@ -1240,6 +1240,11 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
+base-64@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npm.taobao.org/base-64/download/base-64-0.1.0.tgz#780a99c84e7d600260361511c4877613bf24f6bb"
+  integrity sha1-eAqZyE59YAJgNhURxId2E78k9rs=
+
 base64-js@0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-0.0.8.tgz#1101e9544f4a76b1bc3b26d452ca96d7a35e7978"
@@ -4213,6 +4218,19 @@ react-is@^16.3.0-alpha.3:
   version "16.3.0-alpha.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.3.0-alpha.3.tgz#0960d927b2b17154897139c6329aa958e29a86c2"
 
+react-native-doc-viewer@2.7.8:
+  version "2.7.8"
+  resolved "https://registry.npm.taobao.org/react-native-doc-viewer/download/react-native-doc-viewer-2.7.8.tgz#43d065328fb1b7ec90d321e5bd234711e807c8f6"
+  integrity sha1-Q9BlMo+xt+yQ0yHlvSNHEegHyPY=
+
+react-native-fs@^2.3.2:
+  version "2.16.1"
+  resolved "https://registry.npm.taobao.org/react-native-fs/download/react-native-fs-2.16.1.tgz#a8f7e950eaf96e7cf3cf92a5340c5b1ab657d8af"
+  integrity sha1-qPfpUOr5bnzzz5KlNAxbGrZX2K8=
+  dependencies:
+    base-64 "^0.1.0"
+    utf8 "^3.0.0"
+
 react-native@0.54.3:
   version "0.54.3"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.54.3.tgz#e32807ab7ddc70811418101b73a482639d09ccca"
@@ -5175,6 +5193,11 @@ use@^3.1.0:
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.0.tgz#14716bf03fdfefd03040aef58d8b4b85f3a7c544"
   dependencies:
     kind-of "^6.0.2"
+
+utf8@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/utf8/download/utf8-3.0.0.tgz#f052eed1364d696e769ef058b183df88c87f69d1"
+  integrity sha1-8FLu0TZNaW52nvBYsYPfiMh/adE=
 
 util-deprecate@1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"
